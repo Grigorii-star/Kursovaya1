@@ -2,7 +2,7 @@ public class Employee {
     private String fullName;
     private int department;
     private int salary;
-    static int counter = 1;
+    static int counter;
     private int id;
 
     public int getId() {
@@ -30,7 +30,8 @@ public class Employee {
     }
 
     public Employee( String fullName, int department, int salary) {
-        this.id = counter++;
+        counter++;
+        this.id = counter;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
